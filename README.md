@@ -1,3 +1,3 @@
 # mlops-zoomcamp
 
-# This is my personal repo for MLOps Zoomcamp from DataTalksClub
+## This is my personal repo for MLOps Zoomcamp from DataTalksClub
