@@ -4,6 +4,11 @@
 ``` bash
 conda activate exp-tracking-env
 ```
+### Change to directory
+```bash
+cd 02-experiment-tracking
+```
+
 ### Run MLFlow
 ```bash
 mlflow ui --backend-store-uri sqlite:///mlflow.sqlite
