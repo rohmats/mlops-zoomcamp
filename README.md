@@ -1,4 +1,5 @@
 # This is my personal repo for MLOps Zoomcamp from DataTalksClub
+> Original repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
 
 ### Activate experiment tracking environment
 ``` bash
