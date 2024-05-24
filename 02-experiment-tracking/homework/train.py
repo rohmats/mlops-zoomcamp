@@ -25,7 +25,7 @@ def run_train(data_path: str):
     X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
 
     with mlflow.start_run():
-        autolog()
+        mlflow.sklearn.autolog()
         rf = RandomForestRegressor(max_depth=10, random_state=0)
         rf.fit(X_train, y_train)
         y_pred = rf.predict(X_val)

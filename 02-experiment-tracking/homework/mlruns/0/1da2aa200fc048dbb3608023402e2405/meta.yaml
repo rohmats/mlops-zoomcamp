@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp/02-experiment-tracking/homework/mlruns/0/1da2aa200fc048dbb3608023402e2405/artifacts
+end_time: 1716544072312
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1da2aa200fc048dbb3608023402e2405
+run_name: abundant-mare-883
+run_uuid: 1da2aa200fc048dbb3608023402e2405
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716544057147
+status: 3
+tags: []
+user_id: codespace
