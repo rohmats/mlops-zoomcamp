@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import root_mean_squared_error
 
 mlflow.set_tracking_uri("http://127.0.0.1:5000")
-mlflow.set_experiment("random-forest-hyperopt")
+mlflow.set_experiment("random-forest-hyper-opt")
 
 
 def load_pickle(filename: str):
