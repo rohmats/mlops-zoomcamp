@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import root_mean_squared_error
 
 HPO_EXPERIMENT_NAME = "random-forest-hyper-opt"
-EXPERIMENT_NAME = "random-forest-best-model"
+EXPERIMENT_NAME = "random-forest-best-models"
 RF_PARAMS = ['max_depth', 'n_estimators',
              'min_samples_split', 'min_samples_leaf',
              'random_state']
