@@ -24,8 +24,6 @@ def run(data_path):
             mlflow.set_tag("type", "homework")
             mlflow.set_tag("model", "rf-regressor")
 
-            #mlflow.log_param("train-data-path", "./data/green_tripdata_2021-01.parquet")
-            #mlflow.log_param("valid-data-path", "./data/green_tripdata_2021-02.parquet")
             X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
             X_valid, y_valid = load_pickle(os.path.join(data_path, "val.pkl"))
 
