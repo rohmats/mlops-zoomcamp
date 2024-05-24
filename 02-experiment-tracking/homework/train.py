@@ -1,7 +1,6 @@
 import os
 import pickle
 import click
-import argparse
 
 import mlflow
 import mlflow.sklearn
@@ -20,7 +19,7 @@ def load_pickle(filename: str):
     help="Location where the processed NYC taxi trip data was saved"
 )
 
-def run(data_path: str):
+def run_train(data_path: str):
 
         mlflow.set_tracking_uri("sqlite:///hw2.sqlite")
         mlflow.set_experiment("homework-2")
@@ -42,13 +41,4 @@ def run(data_path: str):
 
 
 if __name__ == '__main__':
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--data_path",
-        default="./output",
-        help="the location where the processed NYC taxi trip data was saved."
-    )
-    args = parser.parse_args()
-
-    run(args.data_path)
+    run_train()
