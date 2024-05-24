@@ -1,3 +1,4 @@
+ipykernel
 mlflow
 scikit-learn
 hyperopt
