@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp/02-experiment-tracking/runnig-mlflow-example/mlruns/761351637757456562/e140215420b643b883879350525b1865/artifacts
+end_time: 1716515547126
+entry_point_name: ''
+experiment_id: '761351637757456562'
+lifecycle_stage: active
+run_id: e140215420b643b883879350525b1865
+run_name: dashing-cub-361
+run_uuid: e140215420b643b883879350525b1865
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716515543205
+status: 3
+tags: []
+user_id: codespace
