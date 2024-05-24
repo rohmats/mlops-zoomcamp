@@ -15,7 +15,7 @@ def load_pickle(filename: str):
 
 def run(data_path):
 
-        mlflow.set_tracking_uri("sqlite:///mlflow.db")
+        mlflow.set_tracking_uri("sqlite:///hw2.sqlite")
         mlflow.set_experiment("homework-2")
         mlflow.sklearn.autolog()
 
@@ -27,7 +27,7 @@ def run(data_path):
             #mlflow.log_param("train-data-path", "./data/green_tripdata_2021-01.parquet")
             #mlflow.log_param("valid-data-path", "./data/green_tripdata_2021-02.parquet")
             X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
-            X_valid, y_valid = load_pickle(os.path.join(data_path, "valid.pkl"))
+            X_valid, y_valid = load_pickle(os.path.join(data_path, "val.pkl"))
 
             rf = RandomForestRegressor(max_depth=10, random_state=0)
             rf.fit(X_train, y_train)
