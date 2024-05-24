@@ -21,24 +21,19 @@ def load_pickle(filename: str):
 
 def run_train(data_path: str):
 
-        mlflow.set_tracking_uri("sqlite:///hw2.sqlite")
-        mlflow.set_experiment("homework-2")
-        mlflow.sklearn.autolog()
+    mlflow.set_tracking_uri("sqlite:///hw2.sqlite")
+    mlflow.set_experiment("homework-2")
+    mlflow.sklearn.autolog()
 
-        with mlflow.start_run():
+    X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
+    X_val, y_val = load_pickle(os.path.join(data_path, "val.pkl"))
+    
+    with mlflow.start_run():
+        rf = RandomForestRegressor(max_depth=10, random_state=0)
+        rf.fit(X_train, y_train)
+        y_pred = rf.predict(X_val)
 
-            mlflow.set_tag("type", "homework")
-            mlflow.set_tag("model", "rf-regressor")
-
-            X_train, y_train = load_pickle(os.path.join(data_path, "train.pkl"))
-            X_valid, y_valid = load_pickle(os.path.join(data_path, "val.pkl"))
-
-            rf = RandomForestRegressor(max_depth=10, random_state=0)
-            rf.fit(X_train, y_train)
-            y_pred = rf.predict(X_valid)
-
-            rmse = root_mean_squared_error(y_valid, y_pred)
-
+    rmse = root_mean_squared_error(y_val, y_pred)
 
 if __name__ == '__main__':
     run_train()
