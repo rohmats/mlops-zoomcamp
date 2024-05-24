@@ -8,8 +8,8 @@ from mlflow.tracking import MlflowClient
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import root_mean_squared_error
 
-HPO_EXPERIMENT_NAME = "hpo"
-EXPERIMENT_NAME = "random-forest-best-models"
+HPO_EXPERIMENT_NAME = "random-forest-hyper-opt"
+EXPERIMENT_NAME = "random-forest-best-model"
 RF_PARAMS = ['max_depth', 'n_estimators',
              'min_samples_split', 'min_samples_leaf',
              'random_state']
