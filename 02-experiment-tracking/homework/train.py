@@ -6,7 +6,7 @@ import mlflow
 import mlflow.sklearn
 
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error
+from sklearn.metrics import root_mean_squared_error
 
 def load_pickle(filename: str):
     with open(filename, "rb") as f_in:
@@ -37,7 +37,7 @@ def run_train(data_path: str):
             rf.fit(X_train, y_train)
             y_pred = rf.predict(X_valid)
 
-            rmse = mean_squared_error(y_valid, y_pred, squared=False)
+            rmse = root_mean_squared_error(y_valid, y_pred)
 
 
 if __name__ == '__main__':
