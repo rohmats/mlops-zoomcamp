@@ -1,5 +1,10 @@
 # This is my personal repo for MLOps Zoomcamp from DataTalksClub
-> Original repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
+> Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
+
+### Create environment
+``` bash
+conda create --name exp-tracking-env python=3.9
+```
 
 ### Activate experiment tracking environment
 ``` bash
