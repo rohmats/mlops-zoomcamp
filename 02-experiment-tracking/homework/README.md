@@ -11,3 +11,7 @@ conda activate hw2-env
 ```bash
 pip install -r requirements.txt
 ```
+## Running Home Work MLflow UI
+```bash
+mlflow ui --backend-store-uri sqlite:///hw2.sqlite
+```
