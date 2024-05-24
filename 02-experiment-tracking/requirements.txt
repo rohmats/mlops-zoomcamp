@@ -1,4 +1,4 @@
-mlflow
+mlflow==2.7.1
 jupyter
 scikit-learn
 pandas
