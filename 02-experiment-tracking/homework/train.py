@@ -12,8 +12,14 @@ def load_pickle(filename: str):
     with open(filename, "rb") as f_in:
         return pickle.load(f_in)
 
+@click.command()
+@click.option(
+    "--data_path",
+    default="./output",
+    help="Location where the processed NYC taxi trip data was saved"
+)
 
-def run(data_path):
+def run(data_path: str):
 
         mlflow.set_tracking_uri("sqlite:///hw2.sqlite")
         mlflow.set_experiment("homework-2")
