@@ -1,9 +1,10 @@
-import argparse
 import os
 import pickle
+import click
+import argparse
+
 import mlflow
 import mlflow.sklearn
-
 
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_squared_error
