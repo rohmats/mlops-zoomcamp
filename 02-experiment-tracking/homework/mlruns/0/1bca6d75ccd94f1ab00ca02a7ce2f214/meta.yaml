@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp/02-experiment-tracking/homework/mlruns/0/1bca6d75ccd94f1ab00ca02a7ce2f214/artifacts
+end_time: 1716542327204
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1bca6d75ccd94f1ab00ca02a7ce2f214
+run_name: debonair-lark-930
+run_uuid: 1bca6d75ccd94f1ab00ca02a7ce2f214
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716542312104
+status: 3
+tags: []
+user_id: codespace

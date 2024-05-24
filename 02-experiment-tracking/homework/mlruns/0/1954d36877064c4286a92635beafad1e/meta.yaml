@@ -1,0 +1,15 @@
+artifact_uri: file:///workspaces/mlops-zoomcamp/02-experiment-tracking/homework/mlruns/0/1954d36877064c4286a92635beafad1e/artifacts
+end_time: 1716542730054
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1954d36877064c4286a92635beafad1e
+run_name: amusing-seal-749
+run_uuid: 1954d36877064c4286a92635beafad1e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1716542716254
+status: 3
+tags: []
+user_id: codespace
