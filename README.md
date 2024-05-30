@@ -1,8 +1,9 @@
 # This is my personal repo for MLOps Zoomcamp from DataTalksClub
 > Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
 
-## Ch. 2 Experiment Tracking
-<details><summary><h2>Details</h2></summary>
+## Chapter 2 - Experiment Tracking
+
+<details>
 
 ### Create environment
 ``` bash
