@@ -4,6 +4,7 @@
 ## Chapter 2 - Experiment Tracking
 
 <details>
+    <summary>Click for details</summary>
 
 ### Create environment
 ``` bash
@@ -33,6 +34,15 @@ mlflow ui --backend-store-uri sqlite:///mlflow.sqlite
 ## Chapter 3 - Orchestration and ML Pipelines
 
 <details>
-    <summary></summary>
+    <summary>Click for details</summary>
 
+### Subjudul
 </details>
+
+<!-- ## Chapter 3 - Orchestration and ML Pipelines
+
+<details>
+    <summary>Click for details</summary>
+
+### Subjudul
+</details> -->
