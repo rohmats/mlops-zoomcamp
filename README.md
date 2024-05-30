@@ -1,6 +1,10 @@
 # This is my personal repo for MLOps Zoomcamp from DataTalksClub
 > Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
 
+## Ch. 2 Experiment Tracking
+<details>
+    <summary>Details</summary>
+
 ### Create environment
 ``` bash
 conda create --name exp-tracking-env python=3.9
@@ -24,3 +28,4 @@ pip install -r requirements.txt
 ```bash
 mlflow ui --backend-store-uri sqlite:///mlflow.sqlite
 ```
+</details>
