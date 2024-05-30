@@ -2,8 +2,7 @@
 > Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
 
 ## Ch. 2 Experiment Tracking
-<details>
-    <summary>Details</summary>
+<details><summary><h2>Details</h2></summary>
 
 ### Create environment
 ``` bash
