@@ -2,9 +2,7 @@
 > Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
 ## Chapter 1 - Introduction
 ### Environment preparation
-<a href="http://www.youtube.com/watch?v=MzcmWXYxi2s" target="_blank">
- <img src="http://img.youtube.com/vi/MzcmWXYxi2s/mqdefault.jpg" alt="Watch the video" />
-</a>
+[![Watch the video](https://img.youtube.com/vi/MzcmWXYxi2s/default.jpg)](https://youtu.be/MzcmWXYxi2s)
 
 ## Chapter 2 - Experiment Tracking
 ### Create environment - GiHub Codespace
