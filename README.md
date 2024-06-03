@@ -6,14 +6,15 @@
     <summary>Click for details</summary>
 
 ### Environment preparation
-<iframe width="560" height="315" src="https://www.youtube.com/embed/MzcmWXYxi2s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MzcmWXYxi2s" frameborder="0" allowfullscreen></iframe>
+</details>
 
 ## Chapter 2 - Experiment Tracking
 
 <details>
     <summary>Click for details</summary>
 
-### Create environment
+### Create environment - GiHub Codespace
 ``` bash
 conda create --name exp-tracking-env python=3.9
 ```
