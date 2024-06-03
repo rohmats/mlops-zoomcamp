@@ -1,5 +1,12 @@
 # This is my personal repo for MLOps Zoomcamp from DataTalksClub
 > Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
+## Chapter 1 - Introduction
+
+<details>
+    <summary>Click for details</summary>
+
+### Environment preparation
+<iframe width="560" height="315" src="https://www.youtube.com/embed/MzcmWXYxi2s" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Chapter 2 - Experiment Tracking
 
