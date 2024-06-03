@@ -3,7 +3,7 @@
 ## Chapter 1 - Introduction
 ### Environment preparation
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=MzcmWXYxi2s" target="_blank">
- <img src="http://img.youtube.com/vi/MzcmWXYxi2s/mqdefault.jpg" alt="Watch the video" width="240" height="180" border="10" />
+ <img src="http://img.youtube.com/vi/MzcmWXYxi2s/mqdefault.jpg" alt="Watch the video" />
 </a>
 
 ## Chapter 2 - Experiment Tracking
