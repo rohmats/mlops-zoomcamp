@@ -1,19 +1,12 @@
 # This is my personal repo for MLOps Zoomcamp from DataTalksClub
 > Course repository [link](https://github.com/DataTalksClub/mlops-zoomcamp)
 ## Chapter 1 - Introduction
-
-<details>
-    <summary>Click for details</summary>
-
 ### Environment preparation
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MzcmWXYxi2s" frameborder="0" allowfullscreen></iframe>
 </details>
 
+
 ## Chapter 2 - Experiment Tracking
-
-<details>
-    <summary>Click for details</summary>
-
 ### Create environment - GiHub Codespace
 ``` bash
 conda create --name exp-tracking-env python=3.9
@@ -37,20 +30,21 @@ pip install -r requirements.txt
 ```bash
 mlflow ui --backend-store-uri sqlite:///mlflow.sqlite
 ```
-</details>
+
 
 ## Chapter 3 - Orchestration and ML Pipelines
+### Clone mage repository
+```bash
+git clone https://github.com/mage-ai/mlops.git
+cd mlops
+```
 
-<details>
-    <summary>Click for details</summary>
+### Launch mage
+```bash
+./scripts/start.sh
+```
+### Open mage
+Open http://localhost:6789 in your browser.
 
+<!-- ## Chapter X - XXX
 ### Subjudul
-</details>
-
-<!-- ## Chapter 3 - Orchestration and ML Pipelines
-
-<details>
-    <summary>Click for details</summary>
-
-### Subjudul
-</details> -->
