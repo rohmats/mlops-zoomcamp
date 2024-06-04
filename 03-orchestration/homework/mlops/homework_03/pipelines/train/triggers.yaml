@@ -1,0 +1,15 @@
+triggers:
+- description: null
+  envs: []
+  last_enabled_at: 2024-05-31 09:16:54.498770+00:00
+  name: train_api_call
+  pipeline_uuid: train
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-05-31 09:15:00+00:00
+  status: active
+  token: 93d00aa4ae324b0495552f7d6b68645c
+  variables:
+    experiment_name: nyc-taxi-analysis

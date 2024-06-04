@@ -1,0 +1,14 @@
+triggers:
+- description: null
+  envs: []
+  last_enabled_at: 2024-05-31 08:35:46.555966+00:00
+  name: data_prep_api_call
+  pipeline_uuid: data_preparation
+  schedule_interval: null
+  schedule_type: api
+  settings: null
+  sla: null
+  start_time: 2024-05-31 08:34:00+00:00
+  status: active
+  token: e915d5aaa09f4e1984eaffb849839ec2
+  variables: {}
