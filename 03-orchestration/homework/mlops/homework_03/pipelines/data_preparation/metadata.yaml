@@ -36,7 +36,7 @@ blocks:
   upstream_blocks:
   - ingest
   uuid: prepare
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     file_source:
