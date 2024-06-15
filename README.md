@@ -47,10 +47,17 @@ Open http://localhost:6789 in your browser.
 
 ## Chapter 4 - Model Deployment
 ### Deploying a model as a web-service
+#### Create 
 ```bash
 docker build -t ride-duration-prediction-service:v1 .
+```
+```bash
 docker run -it --rm -p 9696:9696  ride-duration-prediction-service:v1
 ```
 
 <!-- ## Chapter X - XXX
 ### Subjudul
+
+sudo apt-get update
+sudo apt-get install subversion
+svn export https://github.com/DataTalksClub/mlops-zoomcamp/trunk/04-deployment/web-service
