@@ -45,5 +45,12 @@ cd mlops
 ### Open mage
 Open http://localhost:6789 in your browser.
 
+## Chapter 4 - Model Deployment
+### Deploying a model as a web-service
+```bash
+docker build -t ride-duration-prediction-service:v1 .
+docker run -it --rm -p 9696:9696  ride-duration-prediction-service:v1
+```
+
 <!-- ## Chapter X - XXX
 ### Subjudul
