@@ -47,7 +47,7 @@ Open http://localhost:6789 in your browser.
 
 ## Chapter 4 - Model Deployment
 ### Deploying a model as a web-service
-#### Create 
+#### Dockerize it
 ```bash
 docker build -t ride-duration-prediction-service:v1 .
 ```
