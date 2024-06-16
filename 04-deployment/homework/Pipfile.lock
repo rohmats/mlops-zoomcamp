@@ -1,11 +1,11 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "634a7a823a8dd7f5638c9cfbdb1728638f91f3644bd8c94652f9aa2dfac8b4d7"
+            "sha256": "2497d55cf696671c596e5e1a211adfe19c2f846db85acc8bca5bfe6f9bc3bfa8"
         },
         "pipfile-spec": 6,
         "requires": {
-            "python_version": "3.10"
+            "python_version": "3.10.13-slim"
         },
         "sources": [
             {
@@ -754,7 +754,7 @@
                 "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369",
                 "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"
             ],
-            "markers": "python_version >= '3.7'",
+            "markers": "platform_system != 'Windows'",
             "version": "==3.1.4"
         },
         "joblib": {
