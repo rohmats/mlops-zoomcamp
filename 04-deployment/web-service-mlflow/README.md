@@ -6,12 +6,10 @@
 * Model deployment with tracking server
 * Model deployment without the tracking server
 
-Starting the MLflow server with S3:
+Starting the MLflow:
 
 ```bash
-mlflow server \
-    --backend-store-uri=sqlite:///mlflow.db \
-    --default-artifact-root=s3://mlflow-models-alexey/
+mlflow ui 
 ```
 
 Downloading the artifact
