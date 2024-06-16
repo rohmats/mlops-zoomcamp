@@ -9,7 +9,7 @@
 Starting the MLflow:
 
 ```bash
-mlflow ui
+mlflow ui --port 8080 --backend-store-uri sqlite:///mlflow.sqlite
 ```
 
 Downloading the artifact
