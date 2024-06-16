@@ -6,10 +6,9 @@ from flask import Flask, request, jsonify
 
 
 # RUN_ID = os.getenv('RUN_ID')
-# RUN_ID = 'a82e85f4e96a4c91b50b5713979c3f71'
+RUN_ID = '3c55362ba332448e95ccf981547f7eaa'
 
-logged_model = 'runs:/aa0767b5c49145e1b52d5cccde7378c3/model'
-# logged_model = f'runs:/{RUN_ID}/model'
+logged_model = f'runs:/{RUN_ID}/model'
 # logged_model = 'runs:/aa0767b5c49145e1b52d5cccde7378c3/model'
 
 
