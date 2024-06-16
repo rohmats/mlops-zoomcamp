@@ -16,7 +16,7 @@ Downloading the artifact
 
 ```bash
 export MLFLOW_TRACKING_URI="http://127.0.0.1:8080"
-export MODEL_RUN_ID="aa0767b5c49145e1b52d5cccde7378c3"
+export MODEL_RUN_ID="3c55362ba332448e95ccf981547f7eaa"
 
 mlflow artifacts download \
     --run-id ${MODEL_RUN_ID} \
