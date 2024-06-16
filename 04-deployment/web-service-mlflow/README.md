@@ -9,7 +9,7 @@
 Starting the MLflow:
 
 ```bash
-mlflow ui 
+mlflow ui
 ```
 
 Downloading the artifact
