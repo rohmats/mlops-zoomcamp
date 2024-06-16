@@ -8,11 +8,12 @@ from flask import Flask, request, jsonify
 # RUN_ID = os.getenv('RUN_ID')
 # RUN_ID = 'a82e85f4e96a4c91b50b5713979c3f71'
 
-# logged_model = f'mlflow-artifacts:/5/a82e85f4e96a4c91b50b5713979c3f71/artifacts/model'
+logged_model = f'mlflow-artifacts:/5/aa0767b5c49145e1b52d5cccde7378c3/artifacts/model'
 # logged_model = f'runs:/{RUN_ID}/model'
-logged_model = 'runs:/aa0767b5c49145e1b52d5cccde7378c3/model'
-model = mlflow.pyfunc.load_model(logged_model)
+# logged_model = 'runs:/aa0767b5c49145e1b52d5cccde7378c3/model'
 
+
+model = mlflow.pyfunc.load_model(logged_model)
 
 def prepare_features(ride):
     features = {}
