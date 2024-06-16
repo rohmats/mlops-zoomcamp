@@ -9,6 +9,7 @@ flask = "*"
 gunicorn = "*"
 mlflow = "*"
 boto3 = "*"
+pandas = "*"
 
 [dev-packages]
 requests = "*"
