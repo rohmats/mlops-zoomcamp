@@ -15,8 +15,8 @@ mlflow ui --port 8080 --backend-store-uri sqlite:///mlflow.sqlite
 Downloading the artifact
 
 ```bash
-export MLFLOW_TRACKING_URI="http://127.0.0.1:5000"
-export MODEL_RUN_ID="6dd459b11b4e48dc862f4e1019d166f6"
+export MLFLOW_TRACKING_URI="http://127.0.0.1:8080"
+export MODEL_RUN_ID="aa0767b5c49145e1b52d5cccde7378c3"
 
 mlflow artifacts download \
     --run-id ${MODEL_RUN_ID} \
