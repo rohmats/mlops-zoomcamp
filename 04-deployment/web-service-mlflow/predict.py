@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 
 
 # RUN_ID = os.getenv('RUN_ID')
-RUN_ID = 'a82e85f4e96a4c91b50b5713979c3f71'
+RUN_ID = '087af0c88531400a8b427127b36431a7'
 
 # logged_model = f'mlflow-artifacts:/5/a82e85f4e96a4c91b50b5713979c3f71/artifacts/model'
 logged_model = f'runs:/{RUN_ID}/model'
