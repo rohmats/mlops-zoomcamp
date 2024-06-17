@@ -25,13 +25,7 @@ def read_data(filename):
     return df
 
 
-def main(
-    year: Annotated[int, typer.Option(help="The year to use, in YYYY format")],
-    month: Annotated[int, typer.Option(min=1, max=12, help="The month to use")],
-    save_prediction: Annotated[
-        bool, typer.Option(help="Save the predictions of the model to a file")
-    ] = False,
-):
+def main(year, month, save_prediction=False):
 
     df = read_data(
         f"https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_{year:04d}-{month:02d}.parquet"
