@@ -5,6 +5,7 @@ import pickle
 
 import pandas as pd
 import typer
+import numpy as np
 from typing_extensions import Annotated
 
 with open("model.bin", "rb") as f_in:
