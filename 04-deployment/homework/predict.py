@@ -25,43 +25,41 @@ def read_data(filename):
     return df
 
 
-year = 2023
-month = 3
-df = read_data(
-    f"https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_{year:04d}-{month:02d}.parquet"
-)
+def main(
+    year: Annotated[int, typer.Option(help="The year to use, in YYYY format")],
+    month: Annotated[int, typer.Option(min=1, max=12, help="The month to use")],
+    save_prediction: Annotated[
+        bool, typer.Option(help="Save the predictions of the model to a file")
+    ] = False,
+):
+
+    df = read_data(
+        f"https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_{year:04d}-{month:02d}.parquet"
+    )
+
+    dicts = df[categorical].to_dict(orient="records")
+    X_val = dv.transform(dicts)
+    y_pred = model.predict(X_val)
+
+    print(stats.describe(y_pred))
+
+    if save_prediction:
+        df_result = pd.DataFrame()
+        ride_id = f"{year:04d}/{month:02d}_" + df.index.astype("str")
+        df_result["ride_id"] = ride_id
+        df["ride_id"] = ride_id
+        df_result["duration"] = y_pred
+
+        prediction_name = f"prediction_{year}_{month}.parquet"
+        pred_dir = "predictions"
+        os.makedirs(pred_dir, exist_ok=True)
+        df_result.to_parquet(
+            os.path.join(pred_dir, prediction_name),
+            engine="pyarrow",
+            compression=None,
+            index=False,
+        )
 
 
-dicts = df[categorical].to_dict(orient='records')
-X_val = dv.transform(dicts)
-y_pred = model.predict(X_val)
-
-
-print(f"The standard deviation of the prediction is {y_pred.std()}")
-
-
-df_result = pd.DataFrame()
-ride_id = f"{year:04d}/{month:02d}_" + df.index.astype("str")
-df_result["ride_id"] = ride_id
-df["ride_id"] = ride_id
-df_result["duration"] = y_pred
-
-
-df_result.head()
-
-
-prediction_name = f"prediction_{year}_{month}.parquet"
-pred_dir = "predictions"
-os.makedirs(pred_dir, exist_ok=True)
-df_result.to_parquet(
-    os.path.join(pred_dir, prediction_name),
-    engine="pyarrow",
-    compression=None,
-    index=False,
-)
-
-
-print(
-    f"The size of the prediction file is {os.path.getsize(os.path.join(pred_dir, prediction_name))/(1024**2)} MB"
-)
-
+if __name__ == "__main__":
+    typer.run(main)
