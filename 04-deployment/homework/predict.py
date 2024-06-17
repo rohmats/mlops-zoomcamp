@@ -5,7 +5,6 @@ import pickle
 
 import pandas as pd
 import typer
-from scipy import stats
 from typing_extensions import Annotated
 
 with open("model.bin", "rb") as f_in:
@@ -44,7 +43,7 @@ def main(
     X_val = dv.transform(dicts)
     y_pred = model.predict(X_val)
 
-    print(stats.describe(y_pred).mean())
+    print("Mean:", np.mean(y_pred))
 
     if save_prediction:
         df_result = pd.DataFrame()
