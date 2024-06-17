@@ -4,6 +4,8 @@
 import os
 import pickle
 import pandas as pd
+from scipy import stats
+import typer
 
 
 with open('model.bin', 'rb') as f_in:
