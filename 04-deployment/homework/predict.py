@@ -44,7 +44,7 @@ def main(
     X_val = dv.transform(dicts)
     y_pred = model.predict(X_val)
 
-    print(stats.describe(y_pred))
+    print(stats.describe(y_pred).mean())
 
     if save_prediction:
         df_result = pd.DataFrame()
