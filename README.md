@@ -69,5 +69,21 @@ docker build -t ride-duration-prediction-service:v1 .
 docker run -it --rm -p 9696:9696  ride-duration-prediction-service:v1
 ```
 
+## Chapter 5 - Model Monitoring
+### Activate Environment
+```bash
+cd /workspaces/mlops-zoomcamp/05-monitoring/taxi_monitoring
+conda activate model_monitoring
+```
+
+### Run Grafana Docker
+```bash
+docker compose up --build
+```
+
+### Open in browser
+Grafana: http://127.0.0.1:3000/login
+Adminer: http://127.0.0.1:8080/index.php
+
 <!-- ## Chapter X - XXX
 ### Subjudul
