@@ -13,7 +13,7 @@ datasources:
     # The 'proxy' mode means that all requests are proxied via the Grafana backend/server
     access: proxy
     # Specifies the URL (including the port number) of the data source
-    url: db.:5432
+    url: db:5432
     # Specifies the name of the database that Grafana should connect to
     database: test
     # Specifies the username that Grafana should use to connect to the database
