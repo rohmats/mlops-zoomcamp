@@ -43,7 +43,7 @@ def calculate_dummy_metrics_postgresql(curr):
 
 	curr.execute(
 		"insert into dummy_metrics(timestamp, value1, value2, value3) values (%s, %s, %s, %s)",
-		(datetime.datetime.now(pytz.timezone('Europe/London')), value1, value2, value3)
+		(datetime.datetime.now(pytz.timezone('Asia/Bangkok')), value1, value2, value3)
 	)
 
 # Main Function
