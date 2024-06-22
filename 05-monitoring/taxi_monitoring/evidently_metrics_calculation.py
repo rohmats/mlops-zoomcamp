@@ -1,3 +1,10 @@
+# Description: This script calculates the metrics for the taxi dataset using Evidently library and stores them in the PostgreSQL database.
+# The script defines the following tasks:
+# - prep_db: Prepares the database by creating the table taxi_metrics.
+# - calculate_metrics_postgresql: Calculates the metrics for the taxi dataset using the Evidently library and stores them in the PostgreSQL database.
+# - batch_monitoring_backfill: Orchestrates the tasks to prepare the database and calculate the metrics for the taxi dataset using the Evidently library.
+
+# Import Libraries
 import datetime
 import time
 import random
@@ -15,14 +22,16 @@ from evidently.report import Report
 from evidently import ColumnMapping
 from evidently.metrics import ColumnDriftMetric, DatasetDriftMetric, DatasetMissingValuesMetric
 
+# Define Constants and SQL Statement
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s]: %(message)s")
 
 SEND_TIMEOUT = 10
 rand = random.Random()
 
+# Define SQL Statement
 create_table_statement = """
-drop table if exists dummy_metrics;
-create table dummy_metrics(
+drop table if exists taxi_metrics;
+create table taxi_metrics(
 	timestamp timestamp,
 	prediction_drift float,
 	num_drifted_columns integer,
@@ -30,6 +39,7 @@ create table dummy_metrics(
 )
 """
 
+# Load Data and Model
 reference_data = pd.read_parquet('data/reference.parquet')
 with open('models/lin_reg.bin', 'rb') as f_in:
 	model = joblib.load(f_in)
@@ -46,12 +56,15 @@ column_mapping = ColumnMapping(
     target=None
 )
 
+# Define Evidently Report
 report = Report(metrics = [
     ColumnDriftMetric(column_name='prediction'),
     DatasetDriftMetric(),
     DatasetMissingValuesMetric()
 ])
 
+# Define Tasks
+# Function to prepare the database
 @task
 def prep_db():
 	with psycopg.connect("host=localhost port=5432 user=postgres password=example", autocommit=True) as conn:
@@ -61,6 +74,7 @@ def prep_db():
 		with psycopg.connect("host=localhost port=5432 dbname=test user=postgres password=example") as conn:
 			conn.execute(create_table_statement)
 
+# Function to calculate metrics using Evidently
 @task
 def calculate_metrics_postgresql(curr, i):
 	current_data = raw_data[(raw_data.lpep_pickup_datetime >= (begin + datetime.timedelta(i))) &
@@ -83,6 +97,8 @@ def calculate_metrics_postgresql(curr, i):
 		(begin + datetime.timedelta(i), prediction_drift, num_drifted_columns, share_missing_values)
 	)
 
+# Define Flow
+# Function to orchestrate the tasks
 @flow
 def batch_monitoring_backfill():
 	prep_db()
