@@ -1,0 +1,16 @@
+evidently 
+joblib
+jupyter
+matplotlib
+mlflow
+numpy==1.26
+pandas
+pandera
+psycopg
+psycopg_binary
+pyarrow
+requests
+rich
+scikit-learn
+tqdm
+typer
