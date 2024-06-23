@@ -1,0 +1,61 @@
+# Specifies the Docker Compose file version
+version: '3.7'
+
+# Declares volumes that can be used by services in the Docker Compose file
+volumes:
+  # Declares a volume named grafana_data
+  grafana_data: {}
+
+# Defines networks that can be used by services in the Docker Compose file
+networks:
+  # Declares a network named front-tier
+  front-tier:
+  # Declares a network named back-tier
+  back-tier:
+
+# Defines the services that make up your app
+services:
+  # Defines a service named db
+  db:
+    # Specifies the Docker image to use for this service
+    image: postgres
+    # Ensures that the service is always restarted if it stops
+    restart: always
+    # Sets environment variables for the service
+    environment:
+      # Sets the password for the Postgres database
+      POSTGRES_PASSWORD: postgres
+    # Maps ports between the host and the container
+    ports:
+      - "5432:5432"
+    # Specifies the networks that this service is part of
+    networks:
+      - back-tier
+
+  # Defines a service named adminer
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - back-tier
+      - front-tier
+
+  # Defines a service named grafana
+  grafana:
+    image: grafana/grafana
+    # Sets the user ID under which the service will run
+    user: "472"
+    ports:
+      - "3000:3000"
+    # Maps local directories or files to directories inside the container
+    volumes:
+      # Maps a local file to a file inside the container, and makes it read-only
+      - ./config/grafana_datasources.yaml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
+      - ./config/grafana_dashboards.yaml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
+      - ./dashboards:/opt/grafana/dashboards
+    networks:
+      - back-tier
+      - front-tier
+    restart: always
