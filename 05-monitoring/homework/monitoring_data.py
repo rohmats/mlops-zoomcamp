@@ -33,7 +33,7 @@ logger.setLevel("INFO")
 # Setup rich to get nice tracebacks
 install()
 
-
+# Define the column mapping
 num_features = ["passenger_count", "trip_distance", "fare_amount", "total_amount"]
 cat_features = ["PULocationID", "DOLocationID"]
 column_mapping = ColumnMapping(
@@ -44,7 +44,8 @@ column_mapping = ColumnMapping(
 )
 SEND_TIMEOUT = 10
 
-password = os.getenv("HW5_PASS")
+# Set up the database
+password = 'postgres'
 create_table_statement = """
 drop table if exists hw_metrics;
 create table hw_metrics(
@@ -57,7 +58,7 @@ create table hw_metrics(
 )
 """
 
-
+# Define the logging configuration
 def extract_metric_data(result: Dict[str, Any]) -> Dict[str, Union[int, float, str]]:
     """Extract the numbers relevant to each metric
 
@@ -82,7 +83,7 @@ def extract_metric_data(result: Dict[str, Any]) -> Dict[str, Union[int, float, s
     ]
     return result_metrics
 
-
+# Define the function to insert a row into the table
 def insert_row_into_table(curr: psycopg.Cursor, row: Dict[str, Any], table_name: str):
     """Insert a given row into the PostgreSQL table
 
@@ -98,7 +99,7 @@ def insert_row_into_table(curr: psycopg.Cursor, row: Dict[str, Any], table_name:
     sql_cmd = f"insert into {table_name}({fields}) values ({pls})"
     curr.execute(sql_cmd, values)
 
-
+# Define the function to compute the metrics
 def compute_metrics(
     current_data: pd.DataFrame, ref_data: pd.DataFrame
 ) -> Dict[str, Union[int, float]]:
@@ -132,7 +133,7 @@ def compute_metrics(
     metrics = extract_metric_data(result)
     return metrics
 
-
+# Define the function to prepare the database
 def prep_db():
     with psycopg.connect(
         f"host=localhost port=5432 user=postgres password={password}", autocommit=True
