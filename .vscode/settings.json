@@ -1,7 +1,7 @@
 {
     "gitdoc.enabled": true,
     "python.testing.pytestArgs": [
-        "."
+        "06-best-practices/code/test"
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true
