@@ -101,4 +101,5 @@ import model
 #     }
 
 #     assert actual_predictions == expected_predictions
-assert 1 == 1
+def tes():
+    assert 1 == 1
