@@ -1,4 +1,5 @@
 {
+    "python.testing.cwd": "${workspaceFolder}/06-best-practices/code",
     "python.testing.pytestArgs": [
         "tests"
     ],
