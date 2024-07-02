@@ -1,4 +1,5 @@
 {
+    "python.pythonPath": "/home/codespace/.local/share/virtualenvs/code-Y6scyTbD/bin/python",
     "gitdoc.enabled": true,
     "python.testing.cwd": "${workspaceFolder}/mlops-zoomcamp/06-best-practices/code",
     "python.testing.unittestEnabled": false,
