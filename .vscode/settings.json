@@ -1,8 +1,16 @@
 {
     "gitdoc.enabled": true,
-    "python.testing.pytestArgs": [
-        "06-best-practices/code/test"
-    ],
+    "python.testing.cwd": "/workspaces/mlops-zoomcamp/06-best-practices/code",
     "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true
+    "python.testing.pytestArgs": [
+        "06-best-practices"
+    ],
+    "python.testing.pytestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test.py"
+    ]
 }

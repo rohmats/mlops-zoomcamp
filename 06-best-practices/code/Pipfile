@@ -15,6 +15,7 @@ pylint = "==2.14.4"
 black = "*"
 isort = "*"
 pre-commit = "*"
+ipykernel = "*"
 
 [requires]
 python_version = "3.9"
