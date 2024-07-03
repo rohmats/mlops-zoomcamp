@@ -1,6 +1,6 @@
-from pathlib import Path
+# from pathlib import Path
 
-import model
+# import model
 
 
 # def read_text(file):
@@ -101,5 +101,4 @@ import model
 #     }
 
 #     assert actual_predictions == expected_predictions
-def tes():
-    assert 1 == 1
+assert 1 == 1
