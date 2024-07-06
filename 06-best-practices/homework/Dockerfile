@@ -1,10 +1,11 @@
-FROM python:3.10.9-slim
+FROM python:3.10
 
-RUN pip install -U pip & pip install pipenv
+RUN pip install -U pip
+RUN pip install uv 
 
-COPY [ "Pipfile", "Pipfile.lock", "./" ]
+COPY [ "requirements.txt",  "./" ]
 
-RUN pipenv install --system --deploy
+RUN uv pip install --system --no-cache -r requirements.txt
 
 COPY [ "batch.py", "batch.py" ]
 COPY [ "model.bin", "model.bin" ]
