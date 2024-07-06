@@ -7,9 +7,13 @@ name = "pypi"
 scikit-learn = "==1.5.0"
 pandas = "*"
 pyarrow = "*"
-s3fs = "*"
+
 
 [dev-packages]
+pytest = "*"
+s3fs = "*"
+fsspec = "*"
+boto3 = "*"
 
 [requires]
 python_version = "3.10"
