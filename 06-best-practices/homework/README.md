@@ -6,7 +6,7 @@ pipenv shell
 First build the image with the batch model:
 
 ```bash
-docker build -t hw6_integration .
+docker build -t hw6 .
 ```
 
 Build and launch the community `localstack` image that will act as S3:
