@@ -1,0 +1,14 @@
+services:
+  localstack:
+    image: localstack/localstack
+    container_name: localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
+      - DEBUG=1
+      - AWS_ACCESS_KEY_ID=foo
+      - AWS_SECRET_ACCESS_KEY=bar
+      - DEFAULT_REGION=us-east-1
+    volumes:
+      - "./localstack:/var/lib/localstack"

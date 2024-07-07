@@ -9,7 +9,7 @@ RUN pip install click
 
 # Set up AWS credentials
 RUN mkdir -p /root/.aws
-RUN echo "[default]\naws_access_key_id = dummyAccessKeyId\naws_secret_access_key = dummySecretAccessKey" > /root/.aws/credentials
+RUN echo "[default]\naws_access_key_id = foo\naws_secret_access_key = bar" > /root/.aws/credentials
 RUN echo "[default]\nregion = us-east-1" > /root/.aws/config
 
 # Make port 80 available to the world outside this container
